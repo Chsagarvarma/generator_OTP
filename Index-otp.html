@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTPGenerator</title>
+    <link rel="stylesheet" href="style-otp.css" />
+    <script>
+        function createOtp() {
+          let digits = '0987654321';
+          let otp = '';
+          for (let i = 0; i < 4; i++) {
+            otp += digits[Math.floor(Math.random() * digits.length)];
+          }
+          document.getElementById('opt1').innerText = otp;
+        }
+  
+        function validateOtp() {
+          let enteredOtp = document.getElementById('userInput').value;
+          let generatedOtp = document.getElementById('opt1').innerText;
+  
+          if (enteredOtp === generatedOtp) {
+            alert('OTP is valid!');
+          } else {
+            alert('Invalid OTP. Please try again.');
+          }
+        }
+      </script>
+  </head>
+  <body>
+    <div class="otp-box">
+      <h2>Generator OTP</h2>
+      <br>
+
+      <form action="" id="f1">
+        <h3 id="otp2">
+          OTP here :<span id="opt1"></span>
+        </h3>
+        <br />
+        <br />
+        <label for="userInput">Enter OTP here</label>
+        <br>
+        <input type="number"  id="userInput" />
+        <br /><br />
+        <button type="button" onclick="createOtp()">Generator OTP</button>
+        <button type="button" onclick="validateOtp()">submit OTP</button>
+      </form>
+    </div>
+  </body>
+</html>
