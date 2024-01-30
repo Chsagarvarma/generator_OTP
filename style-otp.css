@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(163, 181, 242);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.otp-box{
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 10%;
+    background-color: white;
+    
+   
+}
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+label{
+    font-size: 20px;
+}
+input{
+    width: 80%;
+    height: 25px;
+    border-radius: 10px;
+}
+#f1{
+    padding: 10px 60px;
+
+}
+button{
+    width: 40%;
+    height: 25px;
+    border-radius: 10px;
+
+}
+
